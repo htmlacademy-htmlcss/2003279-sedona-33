@@ -1,0 +1,240 @@
+@font-face {
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/ptsans-400.woff2") format("woff2");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/ptsans-700.woff2") format("woff2");
+    font-display: swap;
+}
+
+body {
+    font-family: "PT Sans", sans-serif;
+    font-size: 18px;
+    line-height: 21px;
+    color: #000000;
+    background-color: #ffffff;
+}
+
+.navigation-link {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px; 
+    text-align: center;
+    color: #000000;
+    text-decoration: none;
+}
+
+.button {
+    font-family: inherit;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    border-radius: 4px;
+    text-decoration: none;
+    background-color: #83B3D3;
+    color: #ffffff;
+}
+
+.button-brown {
+    background-color: #756257;
+    color: #ffffff;
+}
+
+.button-light-blue {
+    background-color: #83B3D3;
+    border-radius: 4px;
+    color: #ffffff;
+}
+
+.button-rating {
+    width: 160px;
+    height: 37px;
+    background-color: #F2F2F2;
+    color: #333333;
+}
+
+.button-transparent {
+    font-size: 18px;
+    line-height: 23px;
+    font-weight: 400;
+    text-transform: none;
+}
+
+.welcome-presentation {
+    background-color: #68A2CA;
+    background-image: url("../images/index-background.jpg");
+    background-repeat: no-repeat;
+    color: #ffffff;
+    background-size: 1200px 485px;
+}
+
+.title {
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    width: 720px;
+    height: auto; 
+}
+
+.subtitle {
+    width: 720px;
+    height: auto; 
+    text-align: center;
+    font-size: 22px;
+    line-height: 26px;
+}
+
+.welcome-subtitle {
+    line-height: 36px;
+}
+
+.advantage-item {
+    text-align: center;
+    width: 400px;
+    height: 384px;
+    background-color: rgba(131, 179, 211, 0.12);
+}
+
+.photo-contained {
+    width: 1200px;
+    background-color: #83B3D3;
+} 
+
+.white-colored {
+    color: #ffffff;
+}
+
+.white-background {
+    background-color: #ffffff;
+}
+
+.cold-light-blue-background {
+    background-color: rgba(131, 179, 211, 0.2);
+}
+
+.search .button-brown {
+    font-size: 20px;
+    line-height: 36px;
+}
+
+.newsletter {
+    width: 1200px;
+    height: 411px;
+    background-color: #83B3D3;
+    background-image: url("../images/newsletter-background.jpg");
+}
+
+.subscription-field {
+    background-color: #F2F2F2;
+    color: #000000;
+    border: none;
+    border-radius: 10px 0px 0px 10px;
+    width: 600px;
+    height: 60px;
+}
+
+.subscription-button {
+    font-family: inherit;
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 700;
+    text-align: center;
+    color:#ffffff;
+    background-color: #83B3D3;
+    width: 200px;
+    height: 60px;
+}
+
+.footer-contacts-phone {
+    font-family: inherit;
+    font-size: 40px;
+    line-height: 40px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #000000;
+    font-style: normal;
+}
+
+.filter-section {
+    width: 1200px;
+    height: auto;
+    color: #ffffff;
+    background-color: #83B3D3;
+}
+
+.breadcrumbs-link {
+    font-family: inherit;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.search-filter-title {
+    font-size: 20px;
+    line-height: 25px;
+    font-weight: 700;
+}
+
+.sorting-container {
+    color: #000000;
+    background-color: #ffffff;
+}
+
+.find-hotels-result {
+    text-align: left;
+    line-height: 39px;
+}
+
+.product-name {
+    font-size: 24px;
+    line-height: 31px;
+    font-weight: 700;
+    text-align: left;
+}
+
+.product-description {
+    font-size: 18px;
+    line-height: 23px;
+    font-weight: 400;
+    text-align: left;
+}
+
+.pagination-link {
+    width: 55px;
+    height: 55px;
+    background-color: #83B3D3;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 20px;
+    line-height: 26px;
+    text-align: center;
+    font-weight: 700;
+    font-style: normal;
+    text-decoration: none;
+}
+
+.pagination-current {
+    background-color: #F2F2F2;
+    color: #000000;
+}
+
+.no-background {
+    background: none;
+}
