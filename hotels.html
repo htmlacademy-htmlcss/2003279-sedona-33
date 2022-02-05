@@ -134,15 +134,17 @@
               <option value="popular">Сначала популярные</option>
               <option value="expensive">Сначала дорогие</option>
             </select>
-            <a href="#" class="sorting-button sorting-button-active">
-              <span class="visually-hidden">Показать карточки</span>
-            </a>
-            <a href="#" class="sorting-button">
-              <span class="visually-hidden">Показать на весь экран</span>
-            </a>
-            <a href="#" class="sorting-button">
-              <span class="visually-hidden">Показать список</span>
-            </a>
+            <div class="sorting-button-container">
+              <a href="#" class="sorting-button sorting-button-active">
+                <span class="visually-hidden">Показать карточки</span>
+              </a>
+              <a href="#" class="sorting-button">
+                <span class="visually-hidden">Показать на весь экран</span>
+              </a>
+              <a href="#" class="sorting-button">
+                <span class="visually-hidden">Показать список</span>
+              </a>
+            </div>
           </div>
           <ul class="product-list">
             <li class="product-card">
@@ -151,8 +153,8 @@
               <h3 class="product-name">Amara Resort & Spa</h3>
               <p class="product-description">Гостиница</p>
               <p class="product-price">От 4000 ₽</p>
-              <a class="button button-brown" href=#>Подробнее</a>
-              <button class="button 0button-light-blue" type="button">В избранное</button>
+              <a class="button button-brown button-product-detail" href=#>Подробнее</a>
+              <button class="button button-light-blue button-favorite" type="button">В избранное</button>
               <div class="rating-stars"></div>
               <p class="button button-rating">Рейтинг: 8,5</p>
             </li>
@@ -162,8 +164,8 @@
               <h3 class="product-name">Desert Quail Inn</h3>
               <p class="product-description">Гостиница</p>
               <p class="product-price">От 3000 ₽</p>
-              <a class="button button-brown" href=#>Подробнее</a>
-              <button class="button button-light-blue" type="button">В избранное</button>
+              <a class="button button-brown button-product-detail" href=#>Подробнее</a>
+              <button class="button button-light-blue button-favorite" type="button">В избранное</button>
               <div class="rating-stars"></div>
               <p class="button button-rating">Рейтинг: 8,9</p>
             </li>
@@ -173,8 +175,8 @@
               <h3 class="product-name">Villas at Poco Diablo</h3>
               <p class="product-description">Гостиница</p>
               <p class="product-price">От 2000 ₽</p>
-              <a class="button button-brown" href=#>Подробнее</a>
-              <button class="button added-in-favourites" type="button">В избранное</button>
+              <a class="button button-brown button-product-detail" href=#>Подробнее</a>
+              <button class="button added-in-favourites button-favorite" type="button">В избранное</button>
               <div class="rating-stars"></div>
               <p class="button button-rating">Рейтинг: 9,2</p>
             </li>
@@ -183,8 +185,8 @@
               <h3 class="product-name">GreenTree Inn</h3>
               <p class="product-description">Гостиница</p>
               <p class="product-price">От 3000 ₽</p>
-              <a class="button button-brown" href=#>Подробнее</a>
-              <button class="button button-light-blue" type="button">В избранное</button>
+              <a class="button button-brown button-product-detail" href=#>Подробнее</a>
+              <button class="button button-light-blue button-favorite" type="button">В избранное</button>
               <div class="rating-stars"></div>
               <p class="button button-rating">Рейтинг: 9,2</p>
             </li>
@@ -215,8 +217,8 @@
             </li>
           </ul>
           <div class="cards-on-page">
-            <p>Гостиниц на странице</p>
-            <select class="select-control" aria-label="Количество карточек">
+            <p class="hotels-on-page">Гостиниц на странице</p>
+            <select class="pagination-select-control" aria-label="Количество карточек">
               <option value="1">1</option>
               <option value="4">4</option>
               <option value="10">10</option>

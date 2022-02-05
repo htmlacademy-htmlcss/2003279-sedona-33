@@ -99,10 +99,15 @@ body {
 }
 
 .button-rating {
+    font-size: 16px;
+    line-height: 20px;
     width: 160px;
-    height: 37px;
+    padding-top: 9px;
+    padding-bottom: 10px;
     background-color: #F2F2F2;
     color: #333333;
+    margin: 0;
+    margin-left: auto;
 }
 
 .button-transparent {
@@ -116,6 +121,7 @@ body {
     font-family: inherit;
     font-weight: 400;
     font-style: normal;
+    font-size: 16px;
     color: #000000;
     text-decoration: none;
     text-transform: uppercase;
@@ -138,13 +144,10 @@ body {
     line-height: 36px;
     font-weight: 700;
     text-transform: uppercase;
-    text-align: center;
-    
-     
+    text-align: center;  
 }
 
 .subtitle {
-    
     text-align: center;
     font-size: 22px;
     line-height: 26px;
@@ -195,6 +198,14 @@ body {
     background-color: rgba(131, 179, 211, 0.2);
 }
 
+.breadcrumbs {
+    display: flex; 
+}
+
+.breadcrumbs-item {
+    margin-right: 11px;
+}
+
 .search-container {
     width: 720px;
     margin: 0 auto;
@@ -235,8 +246,7 @@ body {
     border: none;
     border-radius: 10px 0 0 10px;
     width: 600px;
-    height: 60px;   
-    
+    height: 60px;       
 }
 
 .subscription-button {
@@ -276,6 +286,11 @@ body {
     margin: 0 auto;
 }
 
+.filter-section-title {
+    font-size: 60px;
+    line-height: 77px;
+}
+
 .result-section-container {
     width: 1060px;
     margin: 0 auto;
@@ -300,29 +315,109 @@ body {
 .sorting-container {
     color: #000000;
     background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+}
+
+.select-control {
+    width: 287px;
+    height: 48px;
+    border: 2px solid #E6E6E6;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+.pagination-select-control {
+    width: 160px;
+    height: 48px;
+    border: 2px solid #E6E6E6;
+    box-sizing: border-box;
+    border-radius: 4px;
+    margin-left: 51px;
 }
 
 .find-hotels-result {
     text-align: left;
     line-height: 39px;
+    margin: 0;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1056px;
+    margin: 0;
+    padding: 0;
+}
+
+.product-card {
+    display: flex;
+    flex-wrap: wrap;
+    width: 299px;
+    margin-right: 10px;
+    list-style-type: none;
+    padding: 20px;
+}
+
+.product-image {
+    align-self: center;
+    margin-bottom: 16px;
 }
 
 .product-name {
+    width: 100%;
     font-size: 24px;
     line-height: 31px;
     font-weight: 700;
     text-align: left;
+    margin: 0;
+    margin-bottom: 16px;
+}
+
+.button-product-detail {
+    width: 133px;
+    padding-top: 9px;
+    padding-bottom: 10px;
+    margin-right: auto;
+    margin-bottom: 16px;
+}
+
+.button-favorite {
+    width: 140px;
+    margin-bottom: 16px;
 }
 
 .product-description {
+    width: 133px;
     font-size: 18px;
     line-height: 23px;
     font-weight: 400;
     text-align: left;
+    margin: 0;
+    margin-bottom: 16px;
+    margin-right: 25px;
 }
 
+.product-price {
+    width: 140px;
+    font-size: 18px;
+    line-height: 23px;
+    font-weight: 400;
+    text-align: left;
+    margin: 0;
+    margin-bottom: 16px;
+}
+
+
 .load-more-section {
-    align-self: center;
+    width: 1056px;
+    margin: auto;
+    padding: 30px 290px;
+}
+
+.show-more-button {
+    width: 620px;
+    padding: 17px 0; 
 }
 
 .pagination-section {
@@ -332,9 +427,6 @@ body {
 }
 
 .pagination-link {
-    width: 55px;
-    height: 55px;
-    background-color: #83B3D3;
     color: #ffffff;
     font-family: inherit;
     font-size: 20px;
@@ -344,20 +436,39 @@ body {
     font-style: normal;
     text-decoration: none;
 }
+
 .pagination {
-    margin-right: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    list-style-type: none;  
 }
 
-.cards-on-page {
-    width: 386px;
-    display: flex;
-    justify-content: space-between;
+.pagination-item {
+    width: 55px;
+    height: 55px;
+    background-color: #83B3D3;  
+    border-radius: 4px;
+    margin-right: 8px;
 }
 
 .pagination-current {
     background-color: #F2F2F2;
     color: #000000;
 }
+
+
+.cards-on-page {
+    display: flex;
+    align-items: center;
+    width: 386px;
+    margin-left: auto;  
+}
+
+.hotels-on-page {
+    margin: 0;
+}
+
 
 .no-background {
     background: none;
