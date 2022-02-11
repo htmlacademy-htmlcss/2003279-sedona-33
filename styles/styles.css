@@ -30,6 +30,17 @@ body {
     background-color: #ffffff;
 }
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
 .navigation {
     display: flex;
     width: 1060px;
@@ -37,15 +48,24 @@ body {
 }
 
 .navigation-list {
+    display: flex;
+    flex-wrap: wrap;
     margin: 0;
     padding: 0;
     width: 400px;
+    list-style-type: none;
+}
+
+.page-header-logo {
+    display: block;
 }
 
 .navigation-logo {
     display: block;
     width: 139px;
     margin-right: 30px;
+    margin-bottom: -5px;
+    z-index: 1;
 }
 
 .navigation-user {
@@ -54,6 +74,7 @@ body {
 }
 
 .navigation-link {
+    display: block;
     font-style: normal;
     font-weight: 700;
     font-size: 20px;
@@ -61,7 +82,15 @@ body {
     text-align: center;
     color: #000000;
     text-decoration: none;
+    padding: 20px 17px;
+    margin: 0;
 }
+
+.navigation-user .navigation-link {
+    min-width: 42px;
+    min-height: 66px;
+    padding: 0;
+} 
 
 .main-container {
     flex-grow: 1;
@@ -71,7 +100,6 @@ body {
     width: 1200px;
     margin: 0 auto;
 }
-
 
 .button {
     font-family: inherit;
@@ -117,6 +145,16 @@ body {
     text-transform: none;
 }
 
+.want-here-button {
+    display: block;
+    padding: 9px 15px 8px 15px;
+    align-self: center;
+    margin-top: 13px;
+    width: 160px;
+    height: 37px;
+    box-sizing: border-box;
+}
+
 .sorting-button {
     font-family: inherit;
     font-weight: 400;
@@ -125,6 +163,15 @@ body {
     color: #000000;
     text-decoration: none;
     text-transform: uppercase;
+    background-color: #83B3D3;
+    width: 48px;
+    height: 48px;
+    margin-left: 8px;
+}
+
+.sorting-button-container {
+    margin-left: auto;
+    display: flex;
 }
 
 .sorting-button-active {
@@ -137,6 +184,8 @@ body {
     background-repeat: no-repeat;
     color: #ffffff;
     background-size: 1200px 485px;
+    padding-top: 51px;
+    padding-bottom: 82px;
 }
 
 .title {
@@ -147,14 +196,22 @@ body {
     text-align: center;  
 }
 
+.welcome-text .title {
+    margin: 0;
+    margin-top: 63px;
+    margin-bottom: 23px;
+}
+
 .subtitle {
     text-align: center;
     font-size: 22px;
     line-height: 26px;
 }
 
-.welcome-subtitle {
+.welcome-text .subtitle {
     line-height: 36px;
+    margin: 0;
+    margin-bottom: 79px;
 }
 
 .welcome-image {
@@ -172,6 +229,7 @@ body {
     flex-wrap: wrap;
     margin: 0;
     padding: 0;
+    list-style-type: none;
 }
 
 .advantage-item {
@@ -199,7 +257,10 @@ body {
 }
 
 .breadcrumbs {
-    display: flex; 
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style-type: none; 
 }
 
 .breadcrumbs-item {
@@ -211,12 +272,27 @@ body {
     margin: 0 auto;
 }
 
+.search-container .title {
+    margin: 0;
+    margin-top: 91px;
+    margin-bottom: 15px;
+}
+
+.search-container .subtitle {
+    margin: 0;
+    margin-bottom: 55px;
+}
+
+
 .search-container .button-brown {
     display: block;
     font-size: 20px;
-    line-height: 36px;
+    line-height: 30px;
     width: 575px;
     margin: 0 auto;
+    padding: 15px 0;
+    border-radius: 10px;
+    margin-bottom: 93px;
 }
 
 .result-section {
@@ -225,8 +301,7 @@ body {
 }
 
 .newsletter {
-    width: 1200px;
-    height: 411px;
+    padding: 94px 0;
     background-color: #83B3D3;
     background-image: url("../images/newsletter-background.jpg");
 }
@@ -234,6 +309,16 @@ body {
 .newsletter-container {
     width: 800px;
     margin: 0 auto;
+}
+
+.newsletter-container .title {
+    margin: 0;
+    margin-bottom: 29px;
+}
+
+.newsletter-container .subtitle {
+    margin: 0;
+    margin-bottom: 46px;
 }
 
 .subscription {
@@ -282,13 +367,18 @@ body {
 }
 
 .filter-section-container {
-    width: 1060px;
     margin: 0 auto;
+    padding-top: 35px;
+    padding-left: 71px;
+    padding-right: 72px;
+    padding-bottom: 83px; 
 }
 
 .filter-section-title {
     font-size: 60px;
-    line-height: 77px;
+    line-height: 68px;
+    margin: 0;
+    margin-bottom: 5px;
 }
 
 .result-section-container {
@@ -304,27 +394,91 @@ body {
     font-style: normal;
     text-decoration: none;
     color: #ffffff;
+    margin-right: 30px;
+}
+
+.search-filter {
+    display: flex;
+    margin-top: 45px;
+    min-height: 151px;
 }
 
 .search-filter-title {
     font-size: 20px;
     line-height: 25px;
     font-weight: 700;
+    padding: 0;
+    margin-bottom: 30px ;
+}
+
+.search-filter-group {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+.search-filter-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.search-filter-price-input {
+    width: 144px;
+    box-sizing: border-box;
+    background-color: transparent;
+    padding: 14px 14px 11px 19px;
+    color: #ffffff;
+    border: 2px solid #FFFFFF;
+}
+
+.search-filter-infrastructure {
+    margin-right: 67px;
+}
+
+.search-filter-property-type {
+    margin-right: 167px;
+}
+
+.search-filter-price {
+    margin-right: 81px;
+}
+
+.search-filter-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end ;
+}
+
+.button-apply {
+    padding: 14px 34px;
+    border: none;
+    margin-bottom: 20px;
+}
+
+.button-reset {
+    background-color: transparent;
+    border: none;
+    text-transform: none;
+    font-weight: 400;
 }
 
 .sorting-container {
-    color: #000000;
-    background-color: #ffffff;
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    color: #000000;
+    background-color: #ffffff;  
+    margin-top: 44px;
+    margin-bottom: 53px;
 }
 
 .select-control {
     width: 287px;
     height: 48px;
+    padding: 12px 20px 13px;
     border: 2px solid #E6E6E6;
-    box-sizing: border-box;
     border-radius: 4px;
+    box-sizing: border-box;
 }
 
 .pagination-select-control {
@@ -334,18 +488,21 @@ body {
     box-sizing: border-box;
     border-radius: 4px;
     margin-left: 51px;
+    padding-left: 17px;
+    padding-top: 13px;
+    padding-bottom: 12px;
 }
 
 .find-hotels-result {
     text-align: left;
     line-height: 39px;
     margin: 0;
+    margin-right: 192px;
 }
 
 .product-list {
     display: flex;
     flex-wrap: wrap;
-    width: 1056px;
     margin: 0;
     padding: 0;
 }
@@ -353,10 +510,15 @@ body {
 .product-card {
     display: flex;
     flex-wrap: wrap;
-    width: 299px;
-    margin-right: 10px;
+    width: 300px;
+    margin-right: 18px;
+    margin-bottom: 10px;
     list-style-type: none;
     padding: 20px;
+}
+
+.product-card:nth-child(3n) {
+    margin-right: 0;
 }
 
 .product-image {
@@ -385,6 +547,7 @@ body {
 .button-favorite {
     width: 140px;
     margin-bottom: 16px;
+    border: none;
 }
 
 .product-description {
@@ -410,14 +573,23 @@ body {
 
 
 .load-more-section {
-    width: 1056px;
+    width: 1055px;
     margin: auto;
-    padding: 30px 290px;
+    margin-top: 34px;
+    margin-bottom: 30px;
+    border-top: 1px solid #E6E6E6;
+    border-bottom: 1px solid #E6E6E6;
 }
 
 .show-more-button {
+    display: block;
     width: 620px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
     padding: 17px 0; 
+    border: none;
 }
 
 .pagination-section {
@@ -427,30 +599,33 @@ body {
 }
 
 .pagination-link {
-    color: #ffffff;
+    display: block;
+    width: 55px;
+    height: 55px;
+    box-sizing: border-box;
     font-family: inherit;
     font-size: 20px;
-    line-height: 26px;
+    line-height: 27px;
     text-align: center;
     font-weight: 700;
     font-style: normal;
     text-decoration: none;
+    color: #ffffff;
+    background-color: #83B3D3;
+    border-radius: 4px;
+    margin-right: 8px;
+    padding: 14px 0px;
 }
 
 .pagination {
     display: flex;
-    justify-content: flex-start;
     align-items: center;
     list-style-type: none;  
+    margin: 0;
+    padding: 0;
 }
 
-.pagination-item {
-    width: 55px;
-    height: 55px;
-    background-color: #83B3D3;  
-    border-radius: 4px;
-    margin-right: 8px;
-}
+
 
 .pagination-current {
     background-color: #F2F2F2;
@@ -469,15 +644,16 @@ body {
     margin: 0;
 }
 
-
 .no-background {
     background: none;
 }
 
 .page-footer-container {
     display: flex;
-    width: 1060px;
+    align-items: center;
+    width: 1200px;
     margin: 0 auto;
+    padding: 35px 0;   
 }
 
 .social-footer {
@@ -486,6 +662,24 @@ body {
 
 .footer-contacts {
     align-self: center;
+}
+
+.footer-social-list {
+    display: flex;
+    list-style-type: none;
+}
+
+/* Цвет фона проставлен для визуализации */
+.footer-social-item {
+    width: 36px;
+    height: 29px;
+    margin-right: 4px;
+    margin-bottom: 4px;
+    background-color: #83B3D3;
+}
+
+.footer-social-item:nth-child(3n) {
+    margin-right: 0;
 }
 
 .htmlacademy-link {
