@@ -14,7 +14,7 @@
     font-display: swap;
 }
 
-.html {
+html {
     height: 100%;
 }
 
@@ -82,13 +82,13 @@ body {
     text-align: center;
     color: #000000;
     text-decoration: none;
-    padding: 20px 17px;
+    padding: 20px 17px 19px;
     margin: 0;
 }
 
 .navigation-user .navigation-link {
     min-width: 42px;
-    min-height: 66px;
+    min-height: 65px;
     padding: 0;
 } 
 
@@ -128,14 +128,16 @@ body {
 
 .button-rating {
     font-size: 16px;
-    line-height: 20px;
+    line-height: 18px;
+    font-weight: 400;
     width: 160px;
     padding-top: 9px;
     padding-bottom: 10px;
     background-color: #F2F2F2;
     color: #333333;
     margin: 0;
-    margin-left: auto;
+    text-align: center;
+    margin-left: 140px;
 }
 
 .button-transparent {
@@ -199,7 +201,7 @@ body {
 .welcome-text .title {
     margin: 0;
     margin-top: 63px;
-    margin-bottom: 23px;
+    margin-bottom: 31px;
 }
 
 .subtitle {
@@ -211,7 +213,7 @@ body {
 .welcome-text .subtitle {
     line-height: 36px;
     margin: 0;
-    margin-bottom: 79px;
+    margin-bottom: 80px;
 }
 
 .welcome-image {
@@ -225,24 +227,66 @@ body {
 }
 
 .advantages-list {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 400px);
+    list-style-type: none;
     margin: 0;
     padding: 0;
-    list-style-type: none;
 }
 
 .advantage-item {
-    text-align: center;
-    width: 400px;
     min-height: 384px;
+    text-align: center;
     background-color: rgba(131, 179, 211, 0.12);
 }
 
-.photo-contained {
-    width: 1200px;
+.description-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 97px auto 87px;
+}
+
+.advantage-item .description-with-icon {
+    margin: 85px auto 79px;
+}
+
+.advantage-item h3 {
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.advantage-item p {
+    margin: 0;
+    margin-top: 30px;
+}
+
+.description-with-icon p {
+    margin-top: 20px;
+}
+
+.advantage-item-icon {
+    width: 75px;
+    height: 76px;
+    background-color: #83B3D3;
+    order: -1;
+    align-self: center;
+    margin-bottom: 23px;
+}
+
+.photo-contain {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
     background-color: #83B3D3;
 } 
+
+.index-description-photo {
+    display: block;
+}
 
 .white-colored {
     color: #ffffff;
@@ -275,12 +319,12 @@ body {
 .search-container .title {
     margin: 0;
     margin-top: 91px;
-    margin-bottom: 15px;
+    margin-bottom: 29px;
 }
 
 .search-container .subtitle {
     margin: 0;
-    margin-bottom: 55px;
+    margin-bottom: 56px;
 }
 
 
@@ -321,17 +365,35 @@ body {
     margin-bottom: 46px;
 }
 
+.newsletter-transparent-background {
+    background: none;
+    padding: 0;
+    margin-top: 73px;
+    margin-bottom: 140px;
+}
+
+.newsletter-transparent-background .title {
+    margin-bottom: 46px;
+}
+
 .subscription {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 200px;
 }
 
 .subscription-field {
+    font-family: inherit;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
     background-color: #F2F2F2;
     color: #000000;
     border: none;
     border-radius: 10px 0 0 10px;
-    width: 600px;
-    height: 60px;       
+    padding-left: 22px;
+    padding-top: 17px;
+    padding-bottom: 17px;      
 }
 
 .subscription-button {
@@ -339,28 +401,16 @@ body {
     font-size: 20px;
     line-height: 26px;
     font-weight: 700;
-    text-align: center;
+    text-transform: uppercase;
     color:#ffffff;
     background-color: #83B3D3;
-    width: 200px;
     border: none;
     border-radius: 0 10px 10px 0;
-}
-
-.footer-contacts-phone {
-    font-family: inherit;
-    font-size: 40px;
-    line-height: 40px;
-    font-weight: 400;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: #000000;
-    font-style: normal;
+    padding: 0;
 }
 
 .filter-section {
     width: 1200px;
-    height: auto;
     color: #ffffff;
     background-color: #83B3D3;
     background-image: url("../images/filter-section-background.jpg");
@@ -487,7 +537,7 @@ body {
     border: 2px solid #E6E6E6;
     box-sizing: border-box;
     border-radius: 4px;
-    margin-left: 51px;
+    margin-left: 54px;
     padding-left: 17px;
     padding-top: 13px;
     padding-bottom: 12px;
@@ -500,9 +550,18 @@ body {
     margin-right: 192px;
 }
 
-.product-list {
+/* .product-list {
     display: flex;
     flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+} */
+
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(3, 340px);
+    column-gap: 18px;
+    row-gap: 10px;
     margin: 0;
     padding: 0;
 }
@@ -511,8 +570,8 @@ body {
     display: flex;
     flex-wrap: wrap;
     width: 300px;
-    margin-right: 18px;
-    margin-bottom: 10px;
+    /* margin-right: 18px;
+    margin-bottom: 10px; */
     list-style-type: none;
     padding: 20px;
 }
@@ -521,10 +580,10 @@ body {
     margin-right: 0;
 }
 
-.product-image {
+/* .product-image {
     align-self: center;
     margin-bottom: 16px;
-}
+} */
 
 .product-name {
     width: 100%;
@@ -532,8 +591,7 @@ body {
     line-height: 31px;
     font-weight: 700;
     text-align: left;
-    margin: 0;
-    margin-bottom: 16px;
+    margin: 16px 0;
 }
 
 .button-product-detail {
@@ -542,12 +600,17 @@ body {
     padding-bottom: 10px;
     margin-right: auto;
     margin-bottom: 16px;
+    line-height: 18px;
 }
 
 .button-favorite {
     width: 140px;
     margin-bottom: 16px;
     border: none;
+}
+
+.button-added-in-favorites {
+    background-color: #7DB54F;
 }
 
 .product-description {
@@ -562,7 +625,7 @@ body {
 }
 
 .product-price {
-    width: 140px;
+    width: 142px;
     font-size: 18px;
     line-height: 23px;
     font-weight: 400;
@@ -576,7 +639,7 @@ body {
     width: 1055px;
     margin: auto;
     margin-top: 34px;
-    margin-bottom: 30px;
+    margin-bottom: 29px;
     border-top: 1px solid #E6E6E6;
     border-bottom: 1px solid #E6E6E6;
 }
@@ -584,17 +647,28 @@ body {
 .show-more-button {
     display: block;
     width: 620px;
+    font-size: 20px;
+    line-height: 26px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 30px;
+    margin-top: 29px;
     margin-bottom: 30px;
-    padding: 17px 0; 
+    padding-top: 17px;
+    padding-bottom: 17px; 
     border: none;
+}
+
+.pagination {
+    display: flex;
+    align-items: center;
+    list-style-type: none;  
+    margin: 0;
+    padding: 0;
 }
 
 .pagination-section {
     display: flex;
-    width: 1060px;
+    width: 1056px;
     margin: 0 auto;
 }
 
@@ -613,19 +687,16 @@ body {
     color: #ffffff;
     background-color: #83B3D3;
     border-radius: 4px;
-    margin-right: 8px;
     padding: 14px 0px;
 }
 
-.pagination {
-    display: flex;
-    align-items: center;
-    list-style-type: none;  
-    margin: 0;
-    padding: 0;
+.pagination-item {
+    margin-right: 8px;
 }
 
-
+.pagination-item:last-child {
+    margin-right: 0;
+}
 
 .pagination-current {
     background-color: #F2F2F2;
@@ -636,37 +707,49 @@ body {
 .cards-on-page {
     display: flex;
     align-items: center;
-    width: 386px;
-    margin-left: auto;  
+    justify-content: flex-end;
+    /* width: 386px; */
+    margin-left: 300px;  
 }
 
 .hotels-on-page {
     margin: 0;
 }
 
-.no-background {
-    background: none;
-}
+
 
 .page-footer-container {
     display: flex;
     align-items: center;
     width: 1200px;
-    margin: 0 auto;
-    padding: 35px 0;   
+    margin: 0 auto; 
 }
 
-.social-footer {
-    margin-right: auto;
-}
+
 
 .footer-contacts {
-    align-self: center;
+    margin: 40px auto;
 }
+
+.footer-contacts-phone {
+    font-family: inherit;
+    font-size: 40px;
+    line-height: 40px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #000000;
+    font-style: normal;
+}
+
+
 
 .footer-social-list {
     display: flex;
     list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-left: 70px;
 }
 
 /* Цвет фона проставлен для визуализации */
@@ -683,5 +766,5 @@ body {
 }
 
 .htmlacademy-link {
-    margin-left: auto;
+    margin-right: 72px;
 }
