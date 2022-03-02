@@ -626,6 +626,7 @@ body {
 .subscription-field:focus {
     background-color: #E6E6E6;
     outline: 3px solid #83B3D3;
+    outline-offset: -3px;
 }
 
 .subscription-field:invalid {
@@ -654,6 +655,7 @@ body {
 .subscription-button:focus {
     background-color: #68A2CA;
     outline: 3px solid #756257; 
+    outline-offset: -3px;
 }
     
 .subscription-button:active {
@@ -935,8 +937,16 @@ body {
     border: none;
 }
 
+.button-reset:hover {
+    color: rgba(255, 255, 255, 0.6);
+}
+
 .button-reset:focus {
     outline: 3px solid #83B3D3;   
+}
+
+.button-reset:active {
+    color: rgba(255, 255, 255, 0.3);
 }
 
 /* Найдено гостиниц */
