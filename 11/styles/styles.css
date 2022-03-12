@@ -1368,6 +1368,7 @@ body {
     width: 100%;
     height: 100%;
     background-color: rgba(242, 242, 242, 0.8);
+    z-index: 10;
 }
 
 .modal {
@@ -1428,10 +1429,14 @@ body {
 .modal-search-form {
     display: grid;
     grid-template-columns: 155px 133px 153px 134px;
-    grid-template-rows: 50px 50px 50px 60px;
-    row-gap: 40px;
+    grid-template-rows: repeat(auto-fill, auto);
     font-weight: 700;
     position: relative;
+}
+
+.modal-search-form label {
+    grid-column: 1 / 2;
+    align-self: center;
 }
 
 .modal-search-form input {
@@ -1444,79 +1449,42 @@ body {
     font-size: 18px;
     line-height: 21px;
     font-weight: 700;
-}
-
-.modal-arrival-date {
-    grid-row: 1 / 2;
-    grid-column: 1 / 2;
     align-self: center;
-}
-
-.modal-arrival-date-input {
-    grid-row: 1 / 2;
     grid-column: 2 / -1;
+    padding-left: 19px;
     background-image: url("../images/icons/modal-date.svg");
     background-position: 95% 50%;
     background-repeat: no-repeat;
     padding-left: 19px;
 }
 
-.modal-arrival-message {
-    position: absolute;
+.field::placeholder {
+    color:rgba(0, 0, 0, 0.6);
+}
+
+.modal-message {
     font-size: 16px;
     line-height: 21px;
-    top: 54px;
-    left: 155px;
     margin: 0;
-    font-weight: 400;
-}
-
-.modal-departure-date {
-    grid-row: 2 / 3;
-    grid-column: 1 / 2;
-    align-self: center; 
-}
-
-.modal-departure-date-input {
-    grid-row: 2 / 3;
     grid-column: 2 / -1;
-    background-image: url("../images/icons/modal-date.svg");
-    background-position: 95% 50%;
-    background-repeat: no-repeat;
-    padding-left: 19px;
-}
-
-.modal-departure-message {
-    position: absolute;
-    font-size: 16px;
-    line-height: 21px;
-    top: 144px;
-    left: 155px;
-    margin: 0;
     font-weight: 400;
+    margin-top: 4px;
+    margin-bottom: 15px;
 }
 
-.modal-date-input-active {
+.modal-search-form input:hover {
+    background-color: #E6E6E6;
+}
+
+.modal-search-form input:focus-visible {
+    background-color: #E6E6E6;
+    outline: 3px solid #83B3D3;
+}
+
+.modal-search-form input:focus {
     background-color: #FFFFFF;
-    border: 2px solid #000000;
-    box-sizing: border-box;;
-}
-
-.modal-arrival-date-input:hover,
-.modal-departure-date-input:hover {
-    background-color: #E6E6E6;
-}
-
-.modal-arrival-date-input:focus-visible,
-.modal-departure-date-input:focus-visible {
-    background-color: #E6E6E6;
-    outline: 3px solid #83B3D3;
-}
-
-.modal-arrival-date-input:active
-.modal-departure-date-input:active {
-    background-color: #E6E6E6;
-    outline: 3px solid #83B3D3;
+    outline: 2px solid #000000;
+    outline-offset: -2px;
 }
 
 .modal-message-invalid {
@@ -1524,13 +1492,11 @@ body {
 }
 
 .modal-adults-amount {
-    grid-row: 3 / 4;
     grid-column: 1 / 2;
     align-self: center;
 }
 
 .modal-adults-amount-input {
-    grid-row: 3 / 4;
     grid-column: 2 / 3;
     text-align: center;
     position: relative;
@@ -1545,14 +1511,10 @@ body {
 }
 
 .modal-children-amount {
-    grid-row: 3 / 4;
-    grid-column: 3 / 4;
     margin-left: 56px;
-    align-self: center;
 }
 
 .modal-children-amount-input {
-    grid-row: 3 / 4;
     grid-column: 4 / 5;
     text-align: center;
     position: relative;
@@ -1612,10 +1574,11 @@ body {
 }
 
 .modal-submit {
-    grid-row: 4 / -1;
     grid-column: 1 / -1;
     border: none;
     font-size: 20px;
+    height: 60px;
+    margin-top: 40px; 
 }
 
 .modal-submit:hover {
@@ -1624,6 +1587,7 @@ body {
 
 .modal-submit:focus-visible {
     background-color: #68A2CA;
+    outline: 3px solid #756257;
 }
 
 .modal-submit:active {
@@ -1631,15 +1595,17 @@ body {
     background-color: #68A2CA;
 }
 
-.modal-tooltip-icon {
-    position: relative;
-    padding-right: 50px;
+
+.modal-tooltip-children {
+    display: flex;
+    align-items: center;
 }
 
 .tooltip {
-    position: absolute;
-    margin-top: 194px;
-    margin-left: 398px;
+    position: relative;
+    margin-left: 10px;
+    margin-right: 18px;
+    min-width: 25px;
 }
 
 .tooltip-toggle {
@@ -1700,4 +1666,3 @@ body {
 .tooltip-toggle:focus + .tooltip-text {
   display: block;
 }
-

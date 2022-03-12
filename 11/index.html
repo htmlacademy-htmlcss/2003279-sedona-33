@@ -217,13 +217,14 @@
         <form class="modal-search-form" action="https://echo.htmlacademy.ru/courses" method="post">
           
           <label class="modal-arrival-date" for="arrival-date">Дата заезда:</label>
-          <input class="modal-arrival-date-input" type="field" id="arrival-date" name="date" value="27 апреля 2020" required>
-          <p class="modal-arrival-message modal-message-invalid">Мы не можем отправить вас в прошлое.</p>
+          <input class="modal-arrival-date-input" type="field" id="arrival-date" name="date" value="27 апреля 2020" placeholder="Укажите дату" required>
+          <p class="modal-message modal-arrival-message modal-message-invalid">Мы не можем отправить вас в прошлое.</p>
           
           <label class="modal-departure-date" for="departure-date">Дата выезда:</label>
           <input class="modal-departure-date-input" type="field" id="departure-date" name="date" value="1 сентября 2021" required>
-          <p class="modal-departure-message modal-message-valid">На эти даты есть свободные номера. Пока есть.</p>
+          <p class="modal-message modal-departure-message modal-message-valid">На эти даты есть свободные номера. Пока есть.</p>
           
+
           <span class="modal-adults-amount">Взрослые:</span>
           <div class="modal-adults-amount-input">
             <button class="amount-minus" type="button">
@@ -236,9 +237,8 @@
               <span class="visually-hidden">Увеличить количество взрослых.</span>
             </button>
           </div>
-          
-          <span class="modal-children-amount modal-tooltip-icon">Дети:</span>
-
+          <div class="modal-tooltip-children">
+            <span class="modal-children-amount">Дети:</span>
             <span class="tooltip">
               <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label">
                 <svg class="tooltip-icon" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -258,6 +258,7 @@
               Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.
               </span>
             </span>
+          </div>
           
           <div class="modal-children-amount-input">
             <button class="amount-minus" type="button">
