@@ -319,7 +319,6 @@ body {
     height: 57px;
     top: 428px;
     left: 0;
-    z-index: 2;
 }
 
 .title {
@@ -1359,4 +1358,311 @@ body {
 
 .footer-htmlacademy-link:active {
     fill: rgba(117, 98, 87, 0.3)
+}
+
+.modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(242, 242, 242, 0.8);
+    z-index: 10;
+}
+
+.modal {
+    position: relative;
+    margin: auto;
+    padding: 62px 70px 70px 70px;
+    background: #FFFFFF;
+    box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.15);
+    border-radius: 30px;
+}
+
+.modal-search {
+    width: 575px;
+}
+
+.modal-close-button {
+    position: absolute;
+    padding: 0;
+    top: 54px;
+    right: 70px;
+    width: 53px;
+    height: 53px;
+    border-radius: 50%;
+    background-color: #F2F2F2;
+    border: none;
+    fill: #000000;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-close-button:hover {
+    background-color: #E6E6E6;
+}
+
+.modal-close-button:focus-visible {
+    background-color: #E6E6E6;
+    outline: 3px solid #83B3D3;
+}
+
+.modal-close-button:active {
+    fill:rgba(0, 0, 0, 0.3);
+    background-color: #E6E6E6; 
+}
+
+.modal-title {
+    margin: 0;
+    margin-bottom: 59px;
+    font-family: "PT Sans", sans-serif;
+    font-size: 30px;
+    line-height: 40px;
+    font-weight: 700;
+    color: #000000;
+    text-transform: uppercase;
+}
+
+.modal-search-form {
+    display: grid;
+    grid-template-columns: 155px 133px 153px 134px;
+    grid-template-rows: repeat(auto-fill, auto);
+    font-weight: 700;
+    position: relative;
+}
+
+.modal-search-form label {
+    grid-column: 1 / 2;
+    align-self: center;
+}
+
+.modal-search-form input {
+    background-color: #F2F2F2;
+    border-radius: 4px;
+    border: none;
+    padding-top: 14px;
+    padding-bottom: 15px;
+    font-family: inherit;
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 700;
+    align-self: center;
+    grid-column: 2 / -1;
+    padding-left: 19px;
+    background-image: url("../images/icons/modal-date.svg");
+    background-position: 95% 50%;
+    background-repeat: no-repeat;
+    padding-left: 19px;
+}
+
+.field::placeholder {
+    color:rgba(0, 0, 0, 0.6);
+}
+
+.modal-message {
+    font-size: 16px;
+    line-height: 21px;
+    margin: 0;
+    grid-column: 2 / -1;
+    font-weight: 400;
+    margin-top: 4px;
+    margin-bottom: 15px;
+}
+
+.modal-search-form input:hover {
+    background-color: #E6E6E6;
+}
+
+.modal-search-form input:focus-visible {
+    background-color: #E6E6E6;
+    outline: 3px solid #83B3D3;
+}
+
+.modal-search-form input:focus {
+    background-color: #FFFFFF;
+    outline: 2px solid #000000;
+    outline-offset: -2px;
+}
+
+.modal-message-invalid {
+    color: #FF5757;
+}
+
+.modal-adults-amount {
+    grid-column: 1 / 2;
+    align-self: center;
+}
+
+.modal-adults-amount-input {
+    grid-column: 2 / 3;
+    text-align: center;
+    position: relative;
+    background-color: #F2F2F2;
+    border-radius: 4px;
+    padding-top: 14px;
+    padding-bottom: 15px;
+    font-family: inherit;
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 700;   
+}
+
+.modal-children-amount {
+    margin-left: 56px;
+}
+
+.modal-children-amount-input {
+    grid-column: 4 / 5;
+    text-align: center;
+    position: relative;
+    background-color: #F2F2F2;
+    border-radius: 4px;
+    padding-top: 14px;
+    padding-bottom: 15px;
+    font-family: inherit;
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 700;
+}
+
+.amount-minus {
+    position: absolute;
+    top: 12px;
+    left: 13px;
+    width: 25px;
+    height: 25px;
+    box-sizing: border-box;
+    background: url("../images/icons/modal-minus.svg") no-repeat center;
+    opacity: 0.3;
+    border: none;
+    cursor: pointer;
+}
+
+.amount-plus {
+    position: absolute;
+    top: 12px;
+    right: 13px;
+    width: 25px;
+    height: 25px;
+    box-sizing: border-box;
+    background: url("../images/icons/modal-plus.svg") no-repeat center;
+    opacity: 0.3;
+    border: none;
+    cursor: pointer;
+}
+
+.amount-minus:hover,
+.amount-plus:hover {
+    opacity: 1;
+}
+
+.amount-minus:focus-visible,
+.amount-plus:focus-visible {
+    opacity: 1;
+    border: 3px solid #83B3D3;
+    box-sizing: border-box;
+    border-radius: 4px;
+    outline: none;
+}
+
+.amount-minus:active,
+.amount-plus:active {
+    opacity: 0.2;
+}
+
+.modal-submit {
+    grid-column: 1 / -1;
+    border: none;
+    font-size: 20px;
+    height: 60px;
+    margin-top: 40px; 
+}
+
+.modal-submit:hover {
+    background-color: #68A2CA;
+}
+
+.modal-submit:focus-visible {
+    background-color: #68A2CA;
+    outline: 3px solid #756257;
+}
+
+.modal-submit:active {
+    color:rgba(255, 255, 255, 0.3);
+    background-color: #68A2CA;
+}
+
+
+.modal-tooltip-children {
+    display: flex;
+    align-items: center;
+}
+
+.tooltip {
+    position: relative;
+    margin-left: 10px;
+    margin-right: 18px;
+    min-width: 25px;
+}
+
+.tooltip-toggle {
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    display: block;
+}
+
+.tooltip-icon {
+    width: 100%;
+    height: 100%;
+    fill: #83B3D3;
+    display: block;
+}
+
+.tooltip-toggle:hover .tooltip-icon {
+    fill: #68A2CA;
+}
+
+.tooltip-text {
+    background-color: #333333;
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    color: #FFFFFF;
+    font-family: inherit;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: none;
+    padding: 15px 18px 18px 22px;
+    display: block;
+    width: 216px;
+    position: absolute;
+    margin-top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    display: none;
+}
+
+.tooltip-text::after {
+    content: '';
+    background-image: url("../images/icons/tooltip-triangle.svg");
+    width: 19px;
+    height: 9px;
+    position: absolute;
+    top: -9px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+.tooltip-toggle:hover + .tooltip-text,
+.tooltip-toggle:focus + .tooltip-text {
+  display: block;
 }
